@@ -61,7 +61,7 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: clamp(3rem, 8vw, 5rem);
 }
 
 /* section */
@@ -94,4 +94,19 @@ footer {
 .featured-posts > h2,
 .featured-posts > article:first-of-type {
   grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .featured-posts {
+    grid-template-columns: 2fr repeat(2, 1fr);
+  }
+
+  .featured-posts > article:first-of-type {
+    grid-row: 2 / 4;
+    grid-column: 1 / span 1;
+  }
 }
