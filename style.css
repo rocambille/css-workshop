@@ -75,7 +75,6 @@ section > article {
   display: inline-block;
   padding: 0.5rem;
   margin: 0 0.5rem 1rem;
-  width: 45%;
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: -2px 5px 10px rgb(0 0 0 / 20%);
@@ -85,4 +84,14 @@ section > article {
 footer {
   padding: 1rem;
   background-color: #f76c6c;
+}
+
+.featured-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.featured-posts > h2,
+.featured-posts > article:first-of-type {
+  grid-column: 1 / -1;
 }
